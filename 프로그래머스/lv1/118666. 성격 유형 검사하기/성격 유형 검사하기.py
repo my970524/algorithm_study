@@ -19,21 +19,21 @@ def solution(survey, choices):
             # choices에서 모르겠음을 선택했으므로, 점수 변화 없음
             pass
     # 각 항목에 대해 값 비교해서 answer에 추가
-    if score['R'] == score['T']:
+    if score['R'] >= score['T']:
         answer += 'R'
     else:
-        answer += 'R' if score['R'] > score['T'] else 'T'
-    if score['C'] == score['F']:
+        answer += 'T'
+    if score['C'] >= score['F']:
         answer += 'C'
     else:
-        answer += 'C' if score['C'] > score['F'] else 'F'
-    if score['J'] == score['M']:
+        answer += 'F'
+    if score['J'] >= score['M']:
         answer += 'J'
     else:
-        answer += 'J' if score['J'] > score['M'] else 'M'
-    if score['A'] == score['N']:
+        answer += 'M'
+    if score['A'] >= score['N']:
         answer += 'A'
     else:
-        answer += 'A' if score['A'] > score['N'] else 'N'
+        answer += 'N'
 
     return answer
