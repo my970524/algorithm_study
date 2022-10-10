@@ -1,11 +1,7 @@
 def solution(N, stages):
     challengers = len(stages)
     fail_por = {}
-    # for i in range(1, N+1):
-    #     if len(list(filter(lambda n : n >= i, stages))) == 0:
-    #         fail_por[i] = 0
-    #     else:
-    #         fail_por[i] = stages.count(i) / len(list(filter(lambda n : n >= i, stages)))
+    # 1번 스테이지부터 실패율을 fail_por에 기록   
     for i in range(1, N+1):
         failures = stages.count(i)
         if challengers == 0:
