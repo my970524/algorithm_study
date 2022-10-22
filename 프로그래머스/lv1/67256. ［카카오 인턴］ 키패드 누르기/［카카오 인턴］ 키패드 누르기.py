@@ -1,9 +1,4 @@
 def solution(numbers, hand):
-    # numbers의 0을 11로 바꿔주기
-    # if 0 in numbers:
-    #     zero_index = numbers.index(0)
-    #     numbers[zero_index] = 11
-
     answer = ''
     left = 10
     right = 12
@@ -20,6 +15,7 @@ def solution(numbers, hand):
         else:
             if number == 0:
                 number = 11
+
             left_dis = abs(left-number) // 3 + abs(left-number) % 3
             right_dis = abs(right-number) // 3 + abs(right-number) % 3
             if left_dis < right_dis:
