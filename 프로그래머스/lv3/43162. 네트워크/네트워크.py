@@ -1,20 +1,15 @@
 from collections import deque
 
 def bfs(graph, v, visited):
-    result = []
     queue = deque()
     queue.append(v)
     while queue:
         v = queue.popleft()
-        if visited[v-1] == False:
-            visited[v-1] = True
-            result.append(v)
+        visited[v-1] = True
         for i in graph[v]:
             if visited[i-1] == False:
                 queue.append(i)
     return visited
-        
-    
 
 def solution(n, computers):
     answer = 0
